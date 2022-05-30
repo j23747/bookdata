@@ -6,6 +6,7 @@ const cors = require('cors');
 const middlewareWrapper = require('cors');
 const req = require('express/lib/request');
 const res = require('express/lib/response');
+const { response } = require('express');
 
 
 const app = express();
@@ -27,12 +28,20 @@ app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
 
 
-app.post('/book', (req,res) => {
+app.post('/book', (req,response) => {
     const book = req.body;
 
     // output the book to the console for debugging
-    res.send('Book is added to the Database');
+    response.send('Book is added to the Database');
 
+
+});
+
+
+// Getting all the books endpoint
+
+app.get('/books', (req, response) => {
+    response.json(books);
 });
 
 app.listen(port, () => console.log('Hello World Listening on port ${port}!'))
