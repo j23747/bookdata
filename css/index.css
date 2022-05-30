@@ -1,5 +1,8 @@
 .container{
     background-color: aquamarine;
     margin-top: 2em;
+    width: 70%;
+    margin: auto;
+    padding: 35px;
     
 }
