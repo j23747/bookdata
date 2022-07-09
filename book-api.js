@@ -42,10 +42,30 @@ app.post('/book', (req,response) => {
 });
 
 
+
+
 // Getting all the books endpoint
 
 app.get('/books', (req, response) => {
     response.json(books);
 });
+
+// Deleting a book using isbn
+
+app.delete('/book/:isbn', (req, res) => {
+    // Reading isbn from the URL
+    const isbn = req.params.isbn;
+
+    // Remove item from the books array
+    books = books.filter(i => {
+        if (i.isbn !== isbn) {
+            return true;
+        }
+        return false;
+    });
+
+    res.send('Book is deleted');
+});
+
 
 app.listen(port, () => console.log('Hello World, Listening on port ${port}!'))

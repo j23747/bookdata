@@ -1,7 +1,32 @@
+const req = require("express/lib/request");
+const res = require("express/lib/response");
+const { append } = require("express/lib/response");
+
 const setEditModal = (isbn) => {
 }
 
+
 const deleteBook = (isbn) => {
+
+    const http = new XMLHttpRequest();
+
+    xhttp.open("DELETE", `http://localhost:3000/book/${isbn}`, false);
+    http.send();
+
+
+    // reloading the page
+
+
+    location.reload();
+
+
+
+
+
+
+
+
+
 }
 
 const loadBooks = () => {
