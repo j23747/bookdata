@@ -36,11 +36,10 @@ app.post('/book', (req,response) => {
     books.push(book)
 
 
-    // response.send('Book is added to the Database');
+    response.send('Book is added to the Database');
 
 
 });
-
 
 
 
