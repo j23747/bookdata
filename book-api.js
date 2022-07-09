@@ -32,7 +32,11 @@ app.post('/book', (req,response) => {
     const book = req.body;
 
     // output the book to the console for debugging
-    response.send('Book is added to the Database');
+    console.log(book);
+    books.push(book)
+
+
+    // response.send('Book is added to the Database');
 
 
 });
