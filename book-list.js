@@ -22,7 +22,6 @@ const loadBooks = () => {
 
                         <div>Author: ${book.author}</div>
                         <div>Publisher: ${book.publisher}</div>
-                        <div>Number Of Pages: ${book.numOfPages}</div>
 
                         <hr>
 
